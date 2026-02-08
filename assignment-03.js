@@ -213,17 +213,110 @@ function gonoVote(array) {
         return false;
     }
 }
+// Problem-05: Text Analyzer for an AI Company
+// ⚠️ Function Name Must be analyzeText()
+
+// জিহাদ একটি AI কোম্পানিতে কাজ করে।
+// অনেক সময় ইউজাররা অনেক বড় লেখা(text) ইনপুট দেয়। এত বড় লেখা নিয়ে কাজ করতে AI-এর বেশি সময় লাগে।
+
+// তাই জিহাদ এমন একটি ফাংশন বানাতে চায়, যা বড় টেক্সটকে একটু ছোট করে বিশ্লেষণ করতে সাহায্য করবে।
+
+// তোমাকে একটি ফাংশন লিখতে হবে, যা—
+// 1️⃣ ইনপুট হিসেবে একটি text (string) নেবে
+// 2️⃣ ওই text থেকে সবচেয়ে বড় (দীর্ঘ) শব্দটি খুঁজে বের করবে
+// 3️⃣ পুরো text-এ মোট কতটি অক্ষর আছে তা গণনা করবে
+// ➡️ স্পেস (space) গণনায় ধরা হবে না
+
+// এই তথ্যগুলো ব্যবহার করে জিহাদ একটি ছোট summary তৈরি করতে পারবে।
+
+// 👉 তোমার কাজ হলো এই লজিক ব্যবহার করে একটি ফাংশন তৈরি করা।
+
+// ফাংশনের কাজ: ফাংশনটি ইনপুট হিসেবে একটি String নেবে এবং একটি Object রিটার্ন করবে যেখানে সবচেয়ে বড় শব্দ এবং মোট ক্যারেক্টার সংখ্যা থাকবে।
+
+// 📥 Input:
+// ইনপুট হবে একটি String (একটি পূর্ণ বাক্য/Sentence)।
+
+// 🚀 Output:
+// একটি Object
+
+// {
+//   longwords: String,   // সবচেয়ে লম্বা শব্দ(প্রথমটি যদি একাধিক থাকে)
+//   token: Number        // স্পেস বাদ দিয়ে মোট character সংখ্যা
+// }
+// 🚩 Challenge:
+// যদি
+
+// ইনপুট string না হয় (যেমন: Number, Array বা Object)
+// তাহলে "Invalid" রিটার্ন করতে হবে।
+// 💡 Hints:
+// split(), join() মেথড ব্যবহার করতে পারো।
+
+
+// Test Cases
+// Example 1
+// Input:
+// analyzeText("I am a little honest person")
+// Expected Output:
+// {"longwords":"little","token":22}
+// Example 2
+// Input:
+// analyzeText("Hello world")
+// Expected Output:
+// {"longwords":"Hello","token":10}
+// Example 3
+// Input:
+// analyzeText("Keep coding keep shining")
+// Expected Output:
+// {"longwords":"shining","token":21}
+// Example 4
+// Input:
+// analyzeText(12345)
+// Expected Output:
+// "Invalid"
+// Example 5
+// Input:
+// analyzeText("Programming is fun")
+// Expected Output:
+// {"longwords":"Programming","token":16}
+// Example 6
+// Input:
+// analyzeText("A quick brown fox")
+// Expected Output:
+// {"longwords":"quick","token":14}
+// Example 7
+// Input:
+// analyzeText("")
+// Expected Output:
+// "Invalid"
 //Problem-05: Text Analyzer for an AI Company
 
 function  analyzeText(str) {
     if (typeof str !== 'string') {
         return "Invalid";
     }
-    if (str >==A && str<==z) {
-        
+    
+    let wtSpace= str.split(' ');
+    let maxN=wtSpace[0];
+    for (let num of wtSpace){
+        if(num>maxN){
+            maxN = num;
+        }
+       
     }
+     return maxN
+    console.log(wtSpace);
+    let join = wtSpace.join('')
+    console.log(join.length);
+    // for(let i=0; i<wtSpace.lenth )
+   
+    
 }
-function {
+let str = 'I Love BD';
+let totalStr = analyzeText(str);
+// console.log(totalStr);
 
-}
-
+// let string = "I Love Bangladesh";
+// let split = string.split(' ');
+// console.log(split);
+// let join = split.join('')
+// console.log(join)

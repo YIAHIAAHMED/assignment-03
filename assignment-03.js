@@ -223,4 +223,7 @@ function  analyzeText(str) {
         
     }
 }
+function {
+
+}
 

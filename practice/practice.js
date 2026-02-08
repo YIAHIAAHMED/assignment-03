@@ -1,8 +1,8 @@
 let orangePrice = 100;
 let applePrice = parseInt('20.22');
-console.log(typeof applePrice);
+// console.log(typeof applePrice);
 let total = 20.33333;
-console.log(total.toFixed(2))
+// console.log(total.toFixed(2))
 
 
 // console.log(orangePrice + applePrice);
@@ -26,7 +26,7 @@ for(let number of number1){
 let num2 = 1;
 while (num2<=10){
     if(num2%2===0){
-        console.log('Even Number',num2);
+        // console.log('Even Number',num2);
     }
     num2++;
 }
@@ -42,7 +42,7 @@ let sort = num4.sort((a,b)=>b-a);
 
 let name = 'I Love BD I like I go I eat I ate';
 let replaced = name.replace(/I/g, 'We');
-console.log(replaced);
+//console.log(replaced);
 
 function sumOfEvenNumbers(arr) {
     let evenSum = 0;
@@ -56,5 +56,25 @@ function sumOfEvenNumbers(arr) {
 }
 let even = [1, 22, 3, 42, 5, 62, 7, 8];
 let evenNumber = sumOfEvenNumbers(even);
-console.log(evenNumber);
+// console.log(evenNumber);
+
+
+function vowelNumber(string){
+    let vowelCount = 0;
+    string=string.toLowerCase(); 
+    for(let i=0; i<string.length; i++){
+        let letter = string[i];
+        if(letter === 't'){
+            vowelCount++;
+        } 
+    }
+    return vowelCount;
+    
+}
+
+let strText= "I love JavaScript";
+let vowel = vowelNumber(strText);
+console.log(vowel);
+
+
 
